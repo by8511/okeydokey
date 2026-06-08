@@ -2200,9 +2200,7 @@ Okey Dokey, open it and see what happens today.</p>
     const adVideos = [
       './okeydokey-ad-xtd.mp4',
       './okeydokey-ad-cjl.mp4',
-      './okeydokey-ad-wyw.mp4',
-      './okeydokey-ad-chl.mp4',
-      './okeydokey-ad-merror.mp4'
+      './okeydokey-ad-wyw.mp4'
     ];
     let activeAdVideo = adVideos[0];
     const AD_FALLBACK_SECONDS = 30;
@@ -2582,7 +2580,7 @@ Okey Dokey, open it and see what happens today.</p>
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const logoSrc = document.querySelector('.logo img')?.src || '';
-      const qrSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQMAAAAI2vVwAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACvklEQVRoge2aMXKEMAxFlaGg5Ah7FI4GR/NR9ghbUjCr+OtLQDKZDIW2k4qMg58btP76lhG5HYta7CK64v9R96/+f5v1JUMfBvAu8h7JeUyviz77eHjjLTeZdLdhEz4sMpucVbcROVJM2xCJwSJBjhqAIj9GWo6abY83Nsr8xEbBoiI/S+IZhv1h/4PRSyyK/BgZuoThg8VBZA41+kvBivyHtPqpJOfntHFRw/DvWlxkDvkjuqEZN4h7z9Gje5vf80UmkpaCbbQ8IEcmLOYqPVYsghoVmU8iMRH08zHtQxOrInNJxKQ8Pp1Wsu+TrksyRKKQuCJvkv0d2w8dXnEKw45FAFFh+ZsvMpeEoXn5D/1w6VZhhRKkF69YZC7ZdwfKKr25QniMoNqYwZyUOSoyk1TIuEVf48Mw8eZtjDT/WWQqyRxR8ecotovyZGp1wgxmkTfJS0vr9IqeBJd8V5sik0kaGjzr82xpGYleushVbYrMJVtkI3rp6j2BQ4N+6FKRaaQ5d8Rlo3SFwpbwo5JEH6zIXDI6ukddVVjJi6t8TkfHrMg8cmUttn3AzNg0dImBHI2n/yzyX7KP8GJ36vyDLt07uuLXFHzzReaSMDRiPQG7FXr5JZxpkPXS0ZiJO+giM0l4G59emRhae1cb3sdFhS0yk2xymnjxTzBMl8bzEo+99CJTSewOb35d0tVsldeJp80XeZeEV/S+oks+7/TRY0ES5NClIjNJnv7Zd/GHbnN2dmOUZbfIXDLiy13lFt78QVKsOyZFppMLJyxHdJWDS9TkX2NcanGRmeSK9z+y+UVX6den9PPM0VjkbXLW+ApRLi2t86SP+P29YpGZZKTLptohRoueJ9MiP0Kyo8tDqjXQNxZbc+lFfoCkLh2u0r6aW9gTYLoADEWmkxQefhMaD8V7AtYda+ctRpGJ5O34Bp/TpTt39NwvAAAAAElFTkSuQmCC';
+      const qrSrc = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcIAAAHCAQAAAABUY/ToAAAEGUlEQVR4nO1cQW6rQAy1DVKXRPoHyFHIDXqkqjeDo+QAlWBZichfHnsgREJDIGkb8FtMYZinkuTJ9tgGZFiGmhYSAZyZAiVXTMGZKVByxRScmQIlV0zBmSlQcsUUnJkCJVdMwZlb/IbQkAOe2hwQDzLbIkJ9uKDOndq46vTLd7sEtIglcGYKuf4pKxnbf3rG9fslBygYsDznwACdTGdhBNRF/t2mQDtjtmZf+PMoSmlzYD4HgWUMNebAorJgqv7A3d4PWsBRODOF/OYcy0ZMkNic+v0bGdoLMkAYxvDvNgXaKZM/JRQqGwD8aCQNdGTGU9GBRUHP+J/zQXesHcOZz7dDhdiZVo7aN8b6AMi1BD6iJnVocvXaGPmvkgLthAksiCcZQ9lMDmAohVK91uckZz7ZDvEwUR87Of1GqI/fugULpzy2Qv6rpEH7skNlA7rzYg5HhW7jgavCrgZjpBfcDm1RCfQIX8bMncmnZNMQ6JEICQq7Ghjuy7amBFpvhzJWE2QIemE74j4eCibINbRFJdAjNASD9dELKprruRB2u4Y2qQRazSw6gBrfxKvZRgzxKB6slTmxSJVekPLZr9/t/aAFHIUzk2D1TBBtjgyDCeI+4jaEENvjoVmgncXUhVkaG/pQqArhdPRgun/zeGiLSqCVTK6iQ8OP5iJZIRm040Oqryy1DmkFCT7vt+92CWgRS+DMJFjtS3BjwcjoMEpMg+7oxSyFoMh92SzQ3piZZoAQj2JzQoh9kDmBqkmia4mp/8Ld3g26n2Jw5oo8dTlKHJn1EYrboXmg/dXtEYov6V7sciwbYKgPMrYXhLLqcoBWukKKr5xf8XOSM3+m1tEE52X7snjURV822CaPh2aBdpsfaoJXs7Q130bSuun3etn2lEDr7VAmYc8oP2SJaRhVzmLe0WuuW1MCrc8xdtFbxW39VbkVxv7NNbRFJdBqZitPbrRvzJ+h80z0MuztQVOOiNpo7fWyLSthRTyUXfd59OkiCEUQ3dt7L+ymlUAP0VDVT94UWSGER30jmvuyLSqBHlHrYGtSjI2LNse6JdPVVtr3mHp7SqDFTLAQuS+VBSFZxjqLO7Sh0jpYrtf6nOTMp2so4raLuozt+LH04bWO2aCdvvcDrvxWfM51eAb/b9ztEtAilsCZSXCwPtprH7ZkuhGL2UbuG62tzOEx9WzQTphgGho9QWaBdUCfd7TT6PQ8HtqYEuhhTPw4v0l6sX+u45z3cbb35L/e7/mTvR895AlpLoOQ3lka0cJLq7IOyya84aq3SK/1OcmZz88PCfp+syEo4iFGUv/m9bLZoN2+94NNPnFvn1l3kdVcfW+/USXQYib6O8439XuSMxOg1IJJODMFSq6YgjNToOSKKTgzBUqumIIzU3itb+g/dbts+9ieogcAAAAASUVORK5CYII=';
       const [logo, qrImage] = await Promise.all([loadCanvasImage(logoSrc), loadCanvasImage(qrSrc)]);
 
       if (logo) ctx.drawImage(logo, 72, 70, 82, 84);
